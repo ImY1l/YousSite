@@ -18,7 +18,6 @@ window.onscroll = () => {
         }
     });
 
-    // Optional: auto close navbar on scroll (for mobile)
     navbar.classList.remove('active');
     menuIcon.classList.remove('bx-x');
 }

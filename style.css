@@ -303,7 +303,6 @@ span{
     transform: translateX(-50%);
     z-index: 0;
 }
-/* Timeline item base */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -320,7 +319,6 @@ span{
     border-radius: 50%;
     z-index: 1;
 }
-/* Left side */
 .timeline-item.left {
     left: 0;
     text-align: right;
@@ -328,7 +326,6 @@ span{
 .timeline-item.left .timeline-dot {
     right: -11px;
 }
-/* Right side */
 .timeline-item.right {
     left: 50%;
     text-align: left;
@@ -370,7 +367,6 @@ span{
     line-height: 22px;
 }
 
-/* Responsive Timeline Fixes */
 @media (max-width: 991px) {
     .timeline-items::before {
         left: 18px;
