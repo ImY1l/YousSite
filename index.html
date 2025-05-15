@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0">
+        <title>Responsive Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+
+        <header class="header">
+            <a href="#home" class="logo">Yousef <span>Mohammed</span></a>
+
+                <i class='bx bx-menu' id="menu-icon"></i>
+
+                <nav class="navbar">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#education">Eduaction</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    
+                </nav>
+        </header>
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hi, It's <span>Yousef</span></h1>
+                <h3 class="text-animation">I'm a <span></span></h3>
+                <p>Computer Science Student | Software Engineer | Coding beyond the classroom—building what matters.</p>
+
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/yousef-mohammed-a66999360"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/ImY1l"><i class='bx bxl-github' ></i></a>
+                    <a href="mailto:yousef.mohammed77@outlook.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://wa.me/601162141839"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+
+                <div class="btn-group">
+                    <a href="Resume.pdf" class="btn" target="_blank">Hire</a>
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+            </div>
+                <div class="home-img">
+                    <img src="image.jpg" alt="">
+                </div>
+        </section>
+
+        <section class="education" id="education">
+        <h2 class="heading">Eduaction</h2>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2020</div>
+              <div class="timeline-content">
+                <h3>Secondary School</h3>
+                <p>I completed my secondary education at Khulias Secondary School. During my time there, I developed a solid foundation in key subjects, participated in various school events, and built essential teamwork and leadership skills.</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023</div>
+              <div class="timeline-content">
+                <h3>University</h3>
+                <p>I am currently pursuing my degree at Multimedia University (MMU), where I’ve gained hands-on experience in Software Engineering through both coursework and practical projects. The university has provided me with opportunities to grow academically and professionally, while also encouraging collaboration, innovation, and critical thinking.</p>
+              </div>
+            </div>
+          
+          </div>
+          
+    </section>
+
+<section id="services" class="services-container">
+    <h2 class="heading">Services</h2>
+
+    <div class="services-container">
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Web Development</h4>
+                <p>Build responsive and optimized websites using modern technologies like HTML, CSS, JavaScript, and backend frameworks such as Flask and Django.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Backend Development</h4>
+                <p>Develop secure and scalable APIs using Node.js or Python (Flask/Django). Integrate databases like MySQL or PostgreSQL.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Database Design & Management</h4>
+                <p>Design, implement, and maintain efficient and scalable databases using database systems like MySQL and PostgreSQL to ensure data integrity, security, and optimal performance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-info">
+                <h4>Software Testing</h4>
+                <p>Perform manual and automated testing to ensure software quality, reliability, and performance using tools like Selenium, Postman, and JUnit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact</span></h2>
+
+  <form action="https://formsubmit.co/imy006@outlook.com" method="POST">
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" name="Full Name" placeholder="Full Name" required>
+        <input type="email" name="Email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+        <input type="text" name="Subject" placeholder="Subject" required>
+      </div>
+    </div>
+
+    <div class="input-group-2">
+      <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </div>
+  </form>
+</section>
+
+    <footer class="footer">
+        <div class="social">
+                    <a href="https://www.linkedin.com/in/yousef-mohammed-a66999360"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/ImY1l"><i class='bx bxl-github' ></i></a>
+                    <a href="mailto:yousef.mohammed77@outlook.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://wa.me/601162141839"><i class='bx bxl-whatsapp' ></i></a>
+        </div>
+
+        <p class="copyright">
+            © Yousef Mohammed | All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
