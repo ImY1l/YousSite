@@ -17,6 +17,7 @@
                 <nav class="navbar">
                     <a href="#home" class="active">Home</a>
                     <a href="#education">Eduaction</a>
+                    <a href="#projects">Projects</a>
                     <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
                     
@@ -71,7 +72,38 @@
           
           </div>
           
-    </section>
+<section id="projects" class="projects" data-animate="fadeUp">
+  <h2 class="heading">Projects</h2>
+  <div class="project-grid" id="github-projects"></div>
+</section>
+
+<script>
+  const GITHUB_API_URL = 'https://api.github.com/users/ImY1l/repos';
+
+  async function fetchGitHubRepos() {
+    const projectGrid = document.getElementById('github-projects');
+    const response = await fetch(GITHUB_API_URL);
+    const repos = await response.json();
+
+    projectGrid.innerHTML = repos.map(repo => `
+      <div class="github-card">
+        <div class="github-card-content">
+          <h3>${repo.name}</h3>
+          <div class="project-description">
+            ${repo.language ? `<p><strong>Primary Language:</strong> ${repo.language}</p>` : ''}
+            <p><strong>Last Updated:</strong> ${new Date(repo.updated_at).toLocaleDateString()}</p>
+          </div>
+          <div class="github-card-footer">
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View Code</a>
+            ${repo.homepage ? `<a href="${repo.homepage}" class="demo-link" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ''}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+</script>
 
 <section id="services" class="services-container">
     <h2 class="heading">Services</h2>

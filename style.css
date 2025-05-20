@@ -400,7 +400,75 @@ span{
         padding-left: 30px;
     }
 }
-  
+
+.projects {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: var(--bg-color);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.github-card {
+    height: 140px;
+    background-color: black;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.github-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.github-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.github-card h3 {
+    text-align: left;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.project-description p {
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    margin: 10px 0;
+}
+
+.github-card-footer a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.github-card-footer a:hover {
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    color: var(--main-color);
+    background-color: black;
+}
 
 ::-webkit-scrollbar{
     width: 15px;
