@@ -565,6 +565,29 @@ span{
 .contact form .btn{
     margin-top: 2rem;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 3rem;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+}
+
 footer{
     position: relative;
     bottom: 0;
