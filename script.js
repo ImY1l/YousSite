@@ -24,13 +24,16 @@ window.onscroll = () => {
 
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.display = 'flex';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-});
+function toggleScrollToTopBtn() {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.style.display = 'flex';
+
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+}
+window.addEventListener('scroll', toggleScrollToTopBtn);
+document.addEventListener('DOMContentLoaded', toggleScrollToTopBtn);
 
 scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({
