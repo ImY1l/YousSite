@@ -86,6 +86,10 @@ function createRepoCard(repo, language) {
 async function fetchRepos() {
   const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=100`);
   allRepos = await response.json();
+
+  // Exclude the repo named exactly "ImY1l"
+  allRepos = allRepos.filter(repo => repo.name !== githubUsername);
+
   displayRepos();
 }
 

@@ -228,7 +228,7 @@ span{
     }
     81%,
     100%{
-        content: "Software Tester";
+        content: "Database Administrator";
     }
 }
 @keyframes typing{
@@ -446,27 +446,22 @@ span{
 }
 
 .github-card-footer a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.75rem 0.75rem;
-  background-color: var(--main-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  outline: none;
-  transition: background-color 0.3s ease, 
-  border 0.3s ease,
-  box-shadow 0.2s ease;
+    display: inline-block;
+    padding: 0.75rem 0.75rem;
+    background: var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
+    border-radius: 1rem;
+    font-size: 12px;
+    color: black;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .github-card-footer a:hover {
-  background-color: black;
-  border: 1px solid var(--main-color);
-  box-shadow: 0 2px 2px var(--main-color);
-  outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--main-color);
 }
 
 .projects-cards {
@@ -482,7 +477,7 @@ span{
   background-color: var(--main-color);
   box-shadow: none;
   padding: 0%;
-  color: white;
+  color: black;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -492,6 +487,7 @@ span{
 
 .projects-cards .btn:hover {
   background-color: black;
+  color: var(--main-color);
   transition: background-color 0.3s ease;
   border: 2px solid var(--main-color);
   transform: none;
@@ -507,54 +503,58 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
+
 .services{
-    background-color: var(--bg-color);
-    color: black;
+    background-color: var(--second-bg-color);
 }
 .services h2{
     margin-bottom: 5rem;
     color: white;
 }
-.services-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  box-sizing: border-box;
 }
-.service-box{
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 1rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+.service-box {
+  background-color: var(--main-color);
+  width: 100%;
+  min-height: 200px;
+  border-radius: 1rem;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.service-box:hover{
-    background: black;
-    color: white;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
+.service-box:hover {
+  background: black;
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
 }
-.service-info{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 2rem 2rem;
+.service-info {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
-.service-info h4{
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 2;
+.service-info h4 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2;
+  margin: 0;
 }
-.service-info p{
-    font-size: 1.3rem;
-    font-weight: 600;
-    max-height: 100px;
-    line-height: 1.7;
-    margin: auto;
+.service-info p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-top: 1rem;
 }
 
 .contact{
@@ -600,7 +600,7 @@ span{
   width: 50px;
   height: 50px;
   background-color: var(--main-color);
-  color: white;
+  color: black;
   border-radius: 30%;
   display: flex;
   align-items: center;
