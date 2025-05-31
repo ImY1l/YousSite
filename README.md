@@ -11,8 +11,7 @@ Welcome to my personal website, built using **HTML**, **CSS**, and **JavaScript*
 ```bash
 git clone https://github.com/ImY1l/YousSite.git
 cd YousSite
-open index.html
+start index.html
 ```
 
---
 [![](https://visitcount.itsvg.in/api?id=imy1l&icon=0&color=0)](https://visitcount.itsvg.in)
