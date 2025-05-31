@@ -1,4 +1,4 @@
-# 👋 YousSite
+# 🧑🏻‍💻 YousSite
 Welcome to my personal website, built using **HTML**, **CSS**, and **JavaScript**. It showcases my projects, skills, and contact information in a responsive and user-friendly layout.
 
 ## 🌐 Live Demo
