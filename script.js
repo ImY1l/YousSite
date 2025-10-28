@@ -126,3 +126,52 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+const modal = document.getElementById('statusModal');
+const modalMessage = document.getElementById('modalMessage');
+const closeButton = document.querySelector('.close-button');
+
+function showModal(message) {
+    modalMessage.textContent = message;
+    modal.style.display = 'block';
+}
+
+closeButton.onclick = function() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const data = new FormData(form);
+    
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            showModal('Thanks for your message! I will reach you ASAP.');
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    showModal(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    showModal('Oops! There was a problem submitting your form');
+                }
+            })
+        }
+    }).catch(error => {
+        showModal('Oops! There was a problem submitting your form');
+    });
+});
