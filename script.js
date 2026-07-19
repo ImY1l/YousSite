@@ -70,9 +70,6 @@ function createRepoCard(repo, language) {
     <div class="github-card">
       <div class="github-card-content">
         <h3>${repo.name}</h3>
-        <div class="project-description">
-          <p>${repo.description ? repo.description : ''}</p>
-        </div>
       </div>
       <div class="github-card-footer">
         <span><strong>Most used language:</strong> ${language}</span><br>
